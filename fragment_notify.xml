@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sushma.easyshare.Notify"
+     android:background="@drawable/bluebg"
+  >
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="* Share Bills With People not on EasyShare"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:id="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:id="@+id/payableamount"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        android:hint="Payable Amount"
+        android:textColorHint="#3f51b5"
+        android:background="#ffffff"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/event"
+        android:layout_marginTop="60dp"
+        android:hint="Event"
+        android:textColorHint="#3f51b5"
+        android:background="#ffffff"
+        android:gravity="center"/>
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/radioButton"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:weightSum="1">
+
+        <RadioButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="You Owe"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/uowed"
+            android:layout_gravity="center"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="You are owed"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/urowed"
+            android:checked="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.84" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Send"
+        android:textColor="#ffffff"
+        android:background="@drawable/border1"
+        android:id="@+id/send"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp" />
+</FrameLayout>

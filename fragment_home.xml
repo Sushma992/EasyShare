@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.sushma.easyshare.Home"
+android:background="@drawable/back"
+   >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textColor="#ffffff"
+        android:id="@+id/display"
+       android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" />
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Snap 2 Spilt"
+        android:textColor="#ffffff"
+        android:background="@drawable/border1"
+        android:id="@+id/spilt"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="30dp" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imagespilt"
+        android:src="@drawable/snapnsplit"
+        android:layout_marginLeft="74dp"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="90dp" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imagenotify"
+        android:src="@drawable/paybills"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="90dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay Bills"
+        android:id="@+id/notify"
+        android:textColor="#ffffff"
+        android:background="@drawable/border1"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="30dp" />
+
+</FrameLayout>

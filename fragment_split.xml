@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.sushma.easyshare.Split"
+    android:background="@drawable/back1"
+   >
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/event"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:hint="Description"
+        android:textColorHint="#3f51b5"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#ffffff" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/amount"
+        android:textColorHint="#3f51b5"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:hint="Total Amount in( Rs)"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="70dp"
+        android:background="#ffffff" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Spilt the Bill"
+        android:id="@+id/buttonspiltbill"
+        android:background="@drawable/border1"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp" />
+
+
+</FrameLayout>

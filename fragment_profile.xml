@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.sushma.easyshare.profile"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="401dp"
+        android:id="@+id/listViewprofile"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="50dp" />
+
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:text="Pay To"
+        android:id="@+id/buttonpayto"
+        android:background="@drawable/border"
+        android:textColor="#ffffff"
+        android:layout_gravity="left|top"
+        android:layout_above="@+id/listViewtrans"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:text="Get From"
+        android:id="@+id/buttongetfrom"
+        android:background="@drawable/border"
+        android:textColor="#ffffff"
+        android:layout_gravity="right|top"
+        android:layout_above="@+id/listViewtrans"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="RequestMoney"
+        android:background="@drawable/border"
+        android:textColor="#ffffff"
+        android:id="@+id/buttonreq"
+        android:layout_gravity="center_horizontal|bottom" />
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    tools:context=".Share">
+
+
+    <CheckBox
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Include Me"
+        android:textSize="20dp"
+        android:id="@+id/checkBox1"
+        android:layout_below="@+id/taggedcontacts"
+        android:checked="false" />
+    <ListView
+        android:id="@+id/taggedcontacts"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignBottom="@+id/relativeLayout">
+    </ListView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:fitsSystemWindows="true"
+        tools:context=".Share"
+        android:background="#303f9f"
+        android:id="@+id/relativeLayout"
+        android:layout_toRightOf="@+id/taggedcontacts"
+        android:layout_toEndOf="@+id/taggedcontacts">
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:scrollbars="horizontal|vertical"
+            android:layout_alignParentLeft="true"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <HorizontalScrollView
+                android:id="@+id/hscrll1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    tools:context=".Share">
+                    <TableLayout
+                        android:id="@+id/table_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TableLayout>
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Split"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Split"
+        android:textStyle="bold"
+        android:background="@drawable/border"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="View Split Details"
+        android:textStyle="bold"
+        android:id="@+id/preview"
+        android:background="@drawable/border"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/Split"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignEnd="@+id/relativeLayout"
+        android:layout_marginRight="20dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sushma.easyshare" >
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <permission
+        android:name="com.example.sushma.easyshare.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.sushma.easyshare.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <category android:name="android.intent.category.default" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.sushma.easyshare.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Splash"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:label="Login" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.android.com" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="Register" >
+        </activity>
+        <activity
+            android:name=".UserManual"
+            android:label="User Manual" />
+        <activity
+            android:name=".ResultsActivity"
+            android:label="activity_results" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings" />
+        <activity
+            android:name=".ContactActivity"
+            android:label="Select Contacts" />
+        <activity
+            android:name=".HomePage"
+            android:label="homepage" >
+        </activity>
+        <activity
+            android:name=".SplitActivity"
+            android:label="Split Details" />
+        <activity
+            android:name=".DisplayScannedList"
+            android:label="Scanned bill" >
+        </activity>
+        <activity
+            android:name=".ItemAmountEdit"
+            android:label="Edit Bill" />
+        <activity
+            android:name=".Payment"
+            android:label="Payment" />
+        <activity
+            android:name=".Share"
+            android:label="Split Bill" />
+        <activity
+            android:name=".TaggedContacts"
+            android:label="Select Contacts" />
+        <activity android:name=".snapnsplit" android:label="Snap N Split"></activity>
+        <activity android:name=".paybill" android:label="Pay Bill"></activity>
+
+        <receiver
+            android:name="com.pushbots.google.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.sushma.easyshare" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".customHandler" />
+
+        <service android:name="com.pushbots.push.GCMIntentService" />
+
+    </application>
+
+</manifest>
